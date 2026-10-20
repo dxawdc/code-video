@@ -1,0 +1,13 @@
+{
+  "name": "code-video-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "用代码做视频：九种技术栈的模板、渲染、旁白、检查、校验与交付工具",
+  "bin": {
+    "film": "bin/film.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {}
+}

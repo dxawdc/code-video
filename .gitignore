@@ -1,0 +1,8 @@
+node_modules/
+out/
+*.mp4
+*.wav
+*.zip
+.DS_Store
+Thumbs.db
+__pycache__/

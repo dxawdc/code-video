@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="/__kit/lib/player.css">
+<script type="importmap">
+{ "imports": {
+  "three": "/__lib/three/build/three.module.js",
+  "three/addons/": "/__lib/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c" width="{{W}}" height="{{H}}"></canvas>
+<script src="/__kit/lib/canvas-kit.js"></script>
+<script src="src/vo.js"></script>
+<script src="src/timeline.js"></script>
+<script type="module">
+  import { setup, drawFrame } from './src/scene.js';
+  KIT.mountPlayer({ canvas: document.getElementById('c'), draw: drawFrame, setup, fps: TL.FPS, duration: TL.DURATION, fonts: TL.FONTS });
+</script>
+</body>
+</html>

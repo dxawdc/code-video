@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="/__kit/lib/player.css">
+</head>
+<body>
+<canvas id="c" width="{{W}}" height="{{H}}"></canvas>
+<script src="/__kit/lib/canvas-kit.js"></script>
+<script src="/__kit/lib/gl-kit.js"></script>
+<script src="src/vo.js"></script>
+<script src="src/timeline.js"></script>
+<script src="src/scene.js"></script>
+<script>
+  KIT.mountPlayer({ canvas: document.getElementById('c'), draw: SCENE.drawFrame, setup: SCENE.setup, fps: TL.FPS, duration: TL.DURATION, fonts: TL.FONTS });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+#stage { width: {{W}}px; height: {{H}}px; font-family: "Noto Sans SC", "PingFang SC", sans-serif; color: #f1ebdf; background: #0d0c0b; }
+.bg { position: absolute; inset: 0; background:
+  radial-gradient(1200px 700px at 30% 30%, rgba(217,119,87,.18), transparent 60%),
+  radial-gradient(900px 600px at 80% 80%, rgba(127,208,196,.10), transparent 60%),
+  linear-gradient(#141210, #0a0908); }
+.glow { position: absolute; width: 900px; height: 900px; border-radius: 50%; left: calc(50% - 450px); top: -300px;
+  background: radial-gradient(circle, rgba(242,179,107,.35), transparent 65%); filter: blur(20px); }
+#title { position: absolute; left: 0; right: 0; top: 13%; margin: 0; text-align: center; font: 600 120px "Noto Serif SC", serif; letter-spacing: .12em; }
+#title span { display: inline-block; will-change: transform; }
+#kicker { position: absolute; left: 0; right: 0; top: calc(13% + 180px); text-align: center; margin: 0; font: 400 22px "Cascadia Code", monospace; letter-spacing: .5em; color: rgba(241,235,223,.55); }
+.card { position: absolute; background: rgba(30,27,24,.55); border: 1px solid rgba(255,255,255,.09); border-radius: 24px;
+  backdrop-filter: blur(18px); box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+.row { position: absolute; left: 0; right: 0; top: 41%; display: flex; flex-wrap: wrap; justify-content: center; gap: 60px 80px; }
+.row .card { position: relative; }
+#chart { width: 700px; height: 420px; padding: 30px; box-sizing: border-box; }
+.card-head { display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; color: rgba(241,235,223,.6); margin-bottom: 14px; }
+.card-head b { font: 600 56px "Cascadia Code", monospace; color: #f1ebdf; }
+.grid line { stroke: rgba(255,255,255,.07); stroke-width: 1; }
+#dots circle { fill: #0d0c0b; stroke: #f2b36b; stroke-width: 4; }
+#badge { width: 600px; height: 420px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+#badge span { font-size: 24px; color: rgba(241,235,223,.6); letter-spacing: .2em; }
+#lottie { width: 300px; height: 300px; }
+#cap { position: absolute; left: 0; right: 0; bottom: 34px; text-align: center; font-size: 36px; letter-spacing: 1.5px; text-shadow: 0 2px 12px rgba(0,0,0,.8); opacity: 0; }
+#cap em { font-style: normal; font-weight: 600; color: #f2b36b; }

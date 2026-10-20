@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>{{TITLE}}</title>
+<link rel="stylesheet" href="/__kit/lib/player.css">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="stage">
+  <div class="bg"></div>
+  <div class="glow" id="glow"></div>
+
+  <h1 id="title"></h1>
+  <p id="kicker">HTML · CSS · SVG · GSAP · LOTTIE</p>
+
+  <!-- SVG：折线逐段画出 + 数据点弹出 -->
+  <div class="row">
+  <div class="card" id="chart">
+    <div class="card-head"><span>月活跃</span><b id="count">0</b></div>
+    <svg viewBox="-14 -14 668 328" width="640" height="314">
+      <defs>
+        <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d97757" stop-opacity=".45"/><stop offset="1" stop-color="#d97757" stop-opacity="0"/></linearGradient>
+      </defs>
+      <g class="grid"><line x1="0" y1="60" x2="640" y2="60"/><line x1="0" y1="140" x2="640" y2="140"/><line x1="0" y1="220" x2="640" y2="220"/></g>
+      <path id="areaPath" d="M0 260 L80 230 L160 240 L240 180 L320 190 L400 120 L480 130 L560 60 L640 40 L640 300 L0 300 Z" fill="url(#area)"/>
+      <path id="line" d="M0 260 L80 230 L160 240 L240 180 L320 190 L400 120 L480 130 L560 60 L640 40" fill="none" stroke="#f2b36b" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+      <g id="dots"></g>
+    </svg>
+  </div>
+
+  <!-- Lottie：用 lottie-web 播放 JSON 动画，逐帧 goToAndStop -->
+  <div class="card" id="badge"><div id="lottie"></div><span>Lottie 徽章</span></div>
+  </div>
+
+  <div id="cap"></div>
+</div>
+<script src="/__lib/gsap/dist/gsap.min.js"></script>
+<script src="/__lib/lottie-web/build/player/lottie.min.js"></script>
+<script src="/__kit/lib/canvas-kit.js"></script>
+<script src="src/vo.js"></script>
+<script src="src/timeline.js"></script>
+<script src="src/badge.lottie.js"></script>
+<script src="src/scene.js"></script>
+</body>
+</html>
